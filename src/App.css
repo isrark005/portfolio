@@ -35,3 +35,38 @@
 h1, .heading {
   font-family: 'Anton', sans-serif;
 }
+
+.first-fold {
+  background-image: url(./assets/hero-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.info .info-inner:not(.info .info-inner:nth-of-type(4)) {
+  border: 1px solid #fff;
+  padding: 15px 0px 15px 0px;
+  border-radius: 58px;
+  font-size: 28px;
+  width: 24%;
+  min-height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1em;
+}
+
+.info .info-inner:nth-of-type(2) {
+  margin: auto -60px;
+}
+
+.info-inner-box {
+  width: fit-content;
+}
+
+p {
+  font-size: 20px;
+}
+
+.metal-spining {
+  animation-duration: 10000ms!important;
+}
