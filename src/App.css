@@ -8,6 +8,7 @@
   font-family: 'Blinker', sans-serif;
   background-color: #1F1F41;
   color: #fff;
+  
 }
 
 .container-custom {
@@ -93,5 +94,5 @@ p {
 }
 
 .metal-spining {
-  animation-duration: 10000ms!important;
+  animation-duration: 10s!important;
 }
