@@ -11,7 +11,7 @@
 }
 
 .container-custom {
-  max-width: 1440px;
+  max-width: 1366px;
   margin: 0 auto;
 }
 
@@ -34,6 +34,7 @@
 
 h1, .heading {
   font-family: 'Anton', sans-serif;
+  cursor: default;
 }
 
 .first-fold {
@@ -65,6 +66,30 @@ h1, .heading {
 
 p {
   font-size: 20px;
+  cursor: default;
+}
+
+
+.inner-bar {
+  width: 60%;
+  animation: width-increase 4s ease-in-out infinite alternate;
+}
+
+@keyframes width-increase {
+  to {
+    width: 100%;
+  }
+}
+
+.bar-pusher {
+  animation: pusher 4s ease-in-out infinite alternate;
+  animation-delay: 4s;
+}
+
+@keyframes pusher {
+  to {
+    width: calc(100% - 60px)
+  }
 }
 
 .metal-spining {

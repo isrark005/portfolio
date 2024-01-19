@@ -28,12 +28,12 @@ function App() {
           </div>
         </section>
 
-        <section className="front-end container-custom heading text-4xl h-[25vh]">
+        <section className="front-end container-custom heading text-4xl mb-8 mt-40">
           Front-end Developer
         </section>
         {/* Hero Header ends */}
 
-        <section className="info container-custom flex flex-nowrap items-center">
+        <section className="info container-custom flex flex-nowrap items-center mb-40">
           <div className="info-inner">
             <div className="info-inner-box">
               Based in <br />
@@ -70,13 +70,13 @@ function App() {
 
       {/* about section */}
       <section className="about-us container-custom flex">
+        
         <div className="about-left w-6/12 ">
-          <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] mx-auto">
-          <div className="scroll-bar mb-5 rounded-[12px] h-10 bg-gradient-to-r from-[#4cf4fe] to-[#3b9aa0]">
-            <div className="bar-main">
-              <div className="inner-bar">
-                <div className="bar-scroller"></div>
-              </div>
+          <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] ">
+          <div className="bar-main mb-5 rounded-[12px] h-12 bg-gradient-to-r from-[#4cf4fe] to-[#3b9aa0]">
+            <div className="inner-bar rounded-[12px] flex flex-nowrap px-3 py-2  h-12 bg-gradient-to-r from-[#DBFF00] to-[#A0FB6A]">
+                <div className="bar-pusher h-full w-0"></div>
+                <div className="bar-scroller w-[60px] bg-white h-full rounded-md border-5 border-[#BBD905]"></div>
             </div>
           </div>
           <div className="about-image relative">
@@ -85,9 +85,19 @@ function App() {
           </div>
           </div>
         </div>
+
         <div className="about-right w-6/12">
           <h2 className="heading text-6xl">About us</h2>
-          <p className="my-4">
+          <p className="mt-4">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+            ipsa expedita adipisci sequi architecto reiciendis? Eum sed nisi
+            aut? Numquam animi molestiae eveniet corrupti cum? Expedita dolorem
+            aperiam perferendis laboriosam praesentium quos delectus?
+            Architecto, maiores hic placeat dolorum consectetur impedit,
+            molestiae tempora quidem odio a dignissimos voluptas qui esse
+            suscipit.
+          </p>
+          <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
             ipsa expedita adipisci sequi architecto reiciendis? Eum sed nisi
             aut? Numquam animi molestiae eveniet corrupti cum? Expedita dolorem
