@@ -96,3 +96,45 @@ p {
 .metal-spining {
   animation-duration: 10s!important;
 }
+
+
+
+.overlay{
+  animation-name: fadin;
+  
+  animation-duration: 500ms;
+}
+
+
+@keyframes fadin{
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 0.5;
+    }
+    }
+
+.skills .skill {
+  width: 14.28%;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 100%;
+  display: grid;
+  align-content: center;
+}
+
+
+/* .background-image {
+  background-image: url(./assets/skill-bg.png);
+  background-size: 900px;
+  background-repeat: no-repeat;
+  background-position: 429px -105px;
+} */
+.background-image {
+  width: 100%;
+  top: -336px;
+  left: 199px;
+  animation-duration: 90s!important;
+  z-index: 0;
+}

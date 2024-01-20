@@ -1,14 +1,14 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import "./App.css";
 import { MenuBtn } from "./Components/Menu-btn";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaMusic } from "react-icons/fa";
-import  aboutImage  from './assets/about-me.png'
-import  metalImage  from './assets/metal-form.png'
-import  nfakImg  from './assets/nfak-img.png'
 import { SlOptions } from "react-icons/sl";
+import { motion, AnimatePresence, easeInOut  } from "framer-motion"
+import { aboutImage, metalImage, nfakImg, valo, html, css, bootstrap, react, tailwind, js, wordpress, leftHand, rightHand, skillBg} from './assets/imgIndex'
 
 function App() {
+  const ref = useRef()
   const gradientColor =
     " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF] ";
     const [overlay, setOverlay] = useState(false)
@@ -18,19 +18,22 @@ function App() {
     
   }
   const offHover = (e) => {
-  
     setOverlay(false);
   }
 
-
-
+ 
 
   return (
-    <main>
-    {overlay  && <div className={`overlay w-[100vw] h-[100vh] fixed  bg-black opacity-50 z-[100]`}></div>}
+    <main className=" overflow-x-hidden max-w-full h-[100vh]">
+      <AnimatePresence>
+    {overlay  && <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
+                    exit={{ opacity: 0 }}  className={` w-[100vw] h-[100vh] fixed  bg-black opacity-50 z-[100]`}></motion.div>}
+    </AnimatePresence>
       <div className="first-fold p-6">
         <nav className="nav container-custom flex justify-end gap-5">
-          <MenuBtn content={"About us"} />
+          <MenuBtn content={"About me"} />
           <MenuBtn content={"Projects"} />
           <MenuBtn content={"Contact"} />
         </nav>
@@ -66,7 +69,7 @@ function App() {
               Download <br />
               my resume
             </span>
-            <span className="rounded-full w-16 h-16 bg-[#DBFF00] text-black flex justify-center items-center text-[32px] ">
+            <span className="rounded-full w-16 h-16 bg-[#DBFF00] text-black grid content-center justify-center text-[32px] ">
               <LiaDownloadSolid />
             </span>
           </div>
@@ -84,7 +87,7 @@ function App() {
       </div>
 
       {/* about section */}
-      <section className="about-us container-custom flex my-20">
+      <section className="about-us container-custom flex my-20 ">
         
         <div className="about-left w-6/12 ">
           <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] ">
@@ -122,7 +125,7 @@ function App() {
             suscipit.
           </p>
 
-        <div className="cards-container flex-grow-[1] relative">
+        <div className="cards-container flex-grow-[1] relative z-[150]">
            
             <div onMouseOver={onHover} onMouseLeave={offHover} className="card bg-[#DBFF00] text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-0 left-0  hover:translate-y-[-20px] hover:z-[101] transition-all duration-500">
               <div className="image w-32"><img src={nfakImg} alt="nusrat fateh ali khan singing qawwali"/></div>
@@ -135,7 +138,7 @@ function App() {
               <div className="option-dots ml-auto mr-5 text-3xl text-[#2CBFC9]"><SlOptions /></div>
             </div>
             <div onMouseOver={onHover} onMouseLeave={offHover} className="card bg-white text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-[150px] left-[70px] -rotate-6 hover:rotate-0  hover:translate-y-[-50px] hover:z-[101] transition-all duration-500">
-              <div className="image w-32"><img src={nfakImg} alt="nusrat fateh ali khan singing qawwali"/></div>
+              <div className="image w-32"><img src={valo} alt="nusrat fateh ali khan singing qawwali"/></div>
               <div className="title heading text-3xl ml-3">Gaming is a  <br/>love language</div>
               <div className="option-dots ml-auto mr-5 text-3xl text-[#D9D9D9]"><SlOptions /></div>
             </div>
@@ -146,6 +149,62 @@ function App() {
         </div>
       </section>
       {/* end of about section */}
+
+      <section  className="skill-section h-[700px] z-0">
+      <div className="skill-section-inner container-custom relative h-full grid content-center ">
+        <img src={skillBg}  alt="" className="background-image absolute animate-spin" />
+
+
+        <motion.img
+        initial={{transformOrigin: 'bottom right'}}
+        animate={{translateX: ['0px', '20px', '0px'], rotate: [0, 10, 0]}}
+        transition={{
+          duration: 10,
+          ease: easeInOut,
+          repeat: Infinity
+        }}
+        src={rightHand} alt="" className="hand absolute top-0 -right-52 -rotate-12 z-[11]" />
+        <motion.img 
+        initial={{transformOrigin: 'bottom left'}}
+        animate={{translateY: ['0px', '50px', '0px'], rotate: [0, -10, 0]}}
+        transition={{
+          duration: 10,
+          delay: 1,
+          ease: easeInOut,
+          repeat: Infinity
+        }}
+        src={leftHand} alt="" className="hand absolute -bottom-40 -left-52 rotate-[24deg] z-[11]" />
+
+
+
+
+          <div className="skills flex flex-nowrap gap-8 justify-center z-10">
+           
+            <div className="skill grid content-center justify-center">
+              <img src={html} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={css} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={js} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={tailwind} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={react} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={bootstrap} alt="" />
+            </div>
+            <div className="skill grid content-center justify-center">
+              <img src={wordpress} alt="" />
+            </div>
+            
+          </div>
+      </div>
+      </section>
     </main>
   );
 }
