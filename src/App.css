@@ -138,3 +138,66 @@ p {
   animation-duration: 90s!important;
   z-index: 0;
 }
+
+.project {
+  margin-bottom: 80px;
+  background-image: url(./assets/project-bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  transition: all 250ms ease-in-out;
+  background-position: center center ;
+}
+
+.project:hover {
+  background-size: 120%;
+}
+
+.project-bottom img {
+  border-radius: 35px 35px 200px 35px;
+  position: relative;
+}
+
+.project-bottom {
+  position: relative;
+}
+
+.project-bottom::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 150px;
+  border-radius: 50px;
+  height: 40px;
+  background-color: #DBFF00;
+  top: -15px;
+  left: 25px;
+}
+.project-go-btn {
+  transition: all 100ms linear;
+}
+.project-link{
+  transition: all 100ms linear;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.project-link:hover .project-go-btn {
+  transform: translate(60px);
+}
+
+.project-link::before {
+  content: '\27F6';
+  font-size: 24px;
+  position: absolute;
+  left: -28px;
+  top: 25px;
+  transition: all 100ms linear;
+}
+
+.project-link:hover:before {
+  left: 30px;
+}
+
+.project-link:hover ~ .project-bottom:before {
+  left: 250px;
+}

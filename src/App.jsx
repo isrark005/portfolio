@@ -4,13 +4,15 @@ import { MenuBtn } from "./Components/Menu-btn";
 import { LiaDownloadSolid } from "react-icons/lia";
 import { FaMusic } from "react-icons/fa";
 import { SlOptions } from "react-icons/sl";
-import { motion, AnimatePresence, easeInOut  } from "framer-motion"
-import { aboutImage, metalImage, nfakImg, valo, html, css, bootstrap, react, tailwind, js, wordpress, leftHand, rightHand, skillBg} from './assets/imgIndex'
+import { motion, AnimatePresence  } from "framer-motion"
+import { aboutImage, metalImage, nfakImg, valo} from './assets/imgIndex'
+import { SkillSection } from "./Components/SkillSection";
+import { MyProjectsSection } from "./Components/myProjectsSection";
 
 function App() {
   const ref = useRef()
   const gradientColor =
-    " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF] ";
+    " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF]";
     const [overlay, setOverlay] = useState(false)
 
   const onHover = (e) => {
@@ -150,61 +152,14 @@ function App() {
       </section>
       {/* end of about section */}
 
-      <section  className="skill-section h-[700px] z-0">
-      <div className="skill-section-inner container-custom relative h-full grid content-center ">
-        <img src={skillBg}  alt="" className="background-image absolute animate-spin" />
+      {/* Skill section start */}
+     <SkillSection />
+      {/* Skill section end */}
 
+      {/* My project section start */}
 
-        <motion.img
-        initial={{transformOrigin: 'bottom right'}}
-        animate={{translateX: ['0px', '20px', '0px'], rotate: [0, 10, 0]}}
-        transition={{
-          duration: 10,
-          ease: easeInOut,
-          repeat: Infinity
-        }}
-        src={rightHand} alt="" className="hand absolute top-0 -right-52 -rotate-12 z-[11]" />
-        <motion.img 
-        initial={{transformOrigin: 'bottom left'}}
-        animate={{translateY: ['0px', '50px', '0px'], rotate: [0, -10, 0]}}
-        transition={{
-          duration: 10,
-          delay: 1,
-          ease: easeInOut,
-          repeat: Infinity
-        }}
-        src={leftHand} alt="" className="hand absolute -bottom-40 -left-52 rotate-[24deg] z-[11]" />
-
-
-
-
-          <div className="skills flex flex-nowrap gap-8 justify-center z-10">
-           
-            <div className="skill grid content-center justify-center">
-              <img src={html} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={css} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={js} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={tailwind} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={react} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={bootstrap} alt="" />
-            </div>
-            <div className="skill grid content-center justify-center">
-              <img src={wordpress} alt="" />
-            </div>
-            
-          </div>
-      </div>
-      </section>
+      <MyProjectsSection />
+      {/* My project section ends */}
     </main>
   );
 }
