@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import "./App.css";
 import { MenuBtn } from "./Components/Menu-btn";
 import { LiaDownloadSolid } from "react-icons/lia";
@@ -10,7 +10,7 @@ import { SkillSection } from "./Components/SkillSection";
 import { MyProjectsSection } from "./Components/myProjectsSection";
 
 function App() {
-  const ref = useRef()
+  
   const gradientColor =
     " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF]";
     const [overlay, setOverlay] = useState(false)
@@ -157,9 +157,14 @@ function App() {
       {/* Skill section end */}
 
       {/* My project section start */}
-
       <MyProjectsSection />
       {/* My project section ends */}
+
+      {/* Game stection starts */}
+      <section className="game-section h-[100vh] grid content-center">
+        <h1 className="h-full text-center text-6xl">game section</h1>
+      </section>
+      {/* Game stection ends */}
     </main>
   );
 }
