@@ -162,7 +162,7 @@ function App() {
 
       {/* Game stection starts */}
       <section className="game-section h-[100vh] grid content-center">
-        <h1 className="h-full text-center text-6xl">game section</h1>
+        
       </section>
       {/* Game stection ends */}
     </main>
