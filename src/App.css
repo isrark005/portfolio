@@ -201,3 +201,7 @@ p {
 .project-link:hover ~ .project-bottom:before {
   left: 250px;
 }
+
+.game-section {
+  background-image: url(./assets/neon-base.png);
+}

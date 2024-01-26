@@ -8,6 +8,8 @@ import { motion, AnimatePresence  } from "framer-motion"
 import { aboutImage, metalImage, nfakImg, valo} from './assets/imgIndex'
 import { SkillSection } from "./Components/SkillSection";
 import { MyProjectsSection } from "./Components/myProjectsSection";
+import { Canvas } from "./Canvas/Canvas";
+
 
 function App() {
   
@@ -161,9 +163,11 @@ function App() {
       {/* My project section ends */}
 
       {/* Game stection starts */}
-      <section className="game-section h-[100vh] grid content-center">
-        
+      <div className="game-section">
+      <section className=" h-[600px] grid content-center container-custom my-20" id="game">
+      <Canvas width="1366" height="600" />
       </section>
+      </div>
       {/* Game stection ends */}
     </main>
   );

@@ -16,6 +16,8 @@ import personalProject from './personal-project.png'
 import currencyConverter from './currency-converter.png'
 import newsProject from './news-search-engine.png'
 import portfolioWebsite from './portfolio-website.png'
+import cody from './cody.png'
+import rock from './rock.png'
 
 
 export {
@@ -36,5 +38,7 @@ export {
     personalProject,
     currencyConverter,
     newsProject,
-    portfolioWebsite
+    portfolioWebsite,
+    cody,
+    rock
 }
