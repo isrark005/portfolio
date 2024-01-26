@@ -165,7 +165,7 @@ function App() {
       {/* Game stection starts */}
       <div className="game-section">
       <section className=" h-[600px] grid content-center container-custom my-20" id="game">
-      <Canvas width="1366" height="600" />
+      <Canvas width="1366" height="700" />
       </section>
       </div>
       {/* Game stection ends */}

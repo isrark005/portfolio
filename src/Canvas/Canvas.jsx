@@ -12,8 +12,8 @@ export function Canvas(props) {
     const canvasWidth = 1366
         
     //cody
-    let codyWidth = 128;
-    let codyHeight = 222;
+    let codyWidth = 316;
+    let codyHeight = 500;
     let codyX = 150;
     let codyY = canvasHeight - codyHeight;
     
@@ -89,7 +89,7 @@ export function Canvas(props) {
         
 
         if((e.code == 'Space' || e.code == 'ArrowUp') && cody.y == codyY){
-            velocityY = -10
+            velocityY = -12
         }
 
 
