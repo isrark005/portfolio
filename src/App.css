@@ -205,3 +205,25 @@ p {
 .game-section {
   background-image: url(./assets/neon-base.png);
 }
+
+.connect {
+  width: fit-content;
+  height: 100px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  padding-left: 35px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: width 250ms linear;
+}
+
+.textnomo {
+  transition: all 500mx linear;
+  width: 0px;
+}
+.connect:hover .textnomo{
+  width: max-content;
+}

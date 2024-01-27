@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "./App.css";
 import { MenuBtn } from "./Components/Menu-btn";
+
+// icons
 import { LiaDownloadSolid } from "react-icons/lia";
-import { FaMusic } from "react-icons/fa";
+import { FaMusic, FaLinkedinIn,   } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import { SlOptions } from "react-icons/sl";
+import { TbBrandGithubFilled } from "react-icons/tb";
+import { FaXTwitter } from "react-icons/fa6";
+
 import { motion, AnimatePresence  } from "framer-motion"
 import { aboutImage, metalImage, nfakImg, valo} from './assets/imgIndex'
 import { SkillSection } from "./Components/SkillSection";
@@ -13,9 +19,9 @@ import { Canvas } from "./Canvas/Canvas";
 
 function App() {
   
-  const gradientColor =
-    " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF]";
-    const [overlay, setOverlay] = useState(false)
+  const gradientColor =" from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF]";
+
+  const [overlay, setOverlay] = useState(false)
 
   const onHover = (e) => {
     setOverlay(true);
@@ -35,6 +41,8 @@ function App() {
                     animate={{ opacity: 0.5 }}
                     exit={{ opacity: 0 }}  className={` w-[100vw] h-[100vh] fixed  bg-black opacity-50 z-[100]`}></motion.div>}
     </AnimatePresence>
+
+
       <div className="first-fold p-6">
         <nav className="nav container-custom flex justify-end gap-5">
           <MenuBtn content={"About me"} />
@@ -163,12 +171,29 @@ function App() {
       {/* My project section ends */}
 
       {/* Game stection starts */}
-      <div className="game-section">
+      {/* <div className="game-section">
       <section className=" h-[600px] grid content-center container-custom my-20" id="game">
       <Canvas width="1366" height="700" />
       </section>
-      </div>
+      </div> */}
       {/* Game stection ends */}
+
+      {/* Footer section */}
+      <footer>
+        <section className="footer container-custom bg-['1f1f41'] border-white rounded-2xl border-4 p-10">
+          <div className="footer-left">
+            <h3 className="heading text-[120px]">Reach Out</h3>
+            <div className="flex gap-4">
+              <div className="connect"><span className="mr-[35px]"><FaLinkedinIn/></span> <div className="whitespace-nowrap textnomo">/israr-khan</div></div>
+              <div className="connect"><span className="mr-[35px]"><TbBrandGithubFilled/></span> <div className="whitespace-nowrap">/isrark005</div></div>
+              <div className="connect"><span className="mr-[35px]"><SiGmail/></span> <div className="whitespace-nowrap">isrark005@gmail.com</div></div>
+              <div className="connect"><span className="mr-[35px]"><FaXTwitter/></span> <div className="whitespace-nowrap">/isrark005</div></div>
+              
+            </div>
+          </div>
+          <div className="footer-right"></div>
+        </section>
+      </footer>
     </main>
   );
 }

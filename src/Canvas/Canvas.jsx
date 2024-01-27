@@ -3,7 +3,7 @@ import { cody as codyImgSrc, rock as rockImgSrc } from '../assets/imgIndex';
 
 export function Canvas(props) {
     const canvasRef = useRef(null)
-    const [gameOver, setgameOver] = useState(false)
+    const [gameOver, setgameOver] = useState(true)
     const [score, setScore] = useState(0)
     
     useEffect(() => {
@@ -60,10 +60,14 @@ export function Canvas(props) {
     requestAnimationFrame(update)
     setInterval(placeRock, 1000)
     document.addEventListener('keydown', moveCody);
-    document.addEventListener('click', moveCody);
+    
     
     function update() {
         requestAnimationFrame(update)
+        if(gameOver){
+            return
+        }
+
         
         context.clearRect(0, 0, canvasWidth, canvasHeight)
 
@@ -76,6 +80,11 @@ export function Canvas(props) {
         rockArray?.forEach((rock)=> {
             rock.x += velocityX
             context.drawImage(rockImg, rock.x, rock.y, rock.width, rock.height)
+
+            if(detectCollision(cody, rock)) {
+                setgameOver(true);
+            }
+            
         })
     }
 
@@ -107,6 +116,13 @@ export function Canvas(props) {
         rockArray.push(rock)
 
         if(rockArray > 6) rockArray.shift()
+    }
+
+    function detectCollision(a, b) {
+        return a.x < b.x + b.width &&   //a's top left corner doesn't reach b's top right corner
+               a.x + a.width > b.x &&   //a's top right corner passes b's top left corner
+               a.y < b.y + b.height &&  //a's top left corner doesn't reach b's bottom left corner
+               a.y + a.height > b.y;    //a's bottom left corner passes b's top left corner
     }
     
 
