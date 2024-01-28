@@ -228,3 +228,7 @@ p {
 .footer {
   border-radius: 35px 35px 200px 35px;
 }
+
+.menu-items > li{
+  padding-bottom: 10px;
+}

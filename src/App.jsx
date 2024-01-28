@@ -4,11 +4,11 @@ import { MenuBtn } from "./Components/Menu-btn";
 
 // icons
 import { LiaDownloadSolid } from "react-icons/lia";
-import { FaMusic, FaLinkedinIn } from "react-icons/fa";
+import { FaMusic, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { SlOptions } from "react-icons/sl";
 import { TbBrandGithubFilled } from "react-icons/tb";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaXTwitter, FaXmark  } from "react-icons/fa6";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { aboutImage, metalImage, nfakImg, valo } from "./assets/imgIndex";
@@ -29,6 +29,12 @@ function App() {
     setOverlay(false);
   };
 
+  const [openNav, setOpenNav] = useState(false)
+
+  const handleNav = () => {
+      setOpenNav((prev) => !prev)
+  }
+ 
   return (
     <main className=" overflow-x-hidden max-w-full h-[100vh]">
       <AnimatePresence>
@@ -42,12 +48,20 @@ function App() {
         )}
       </AnimatePresence>
 
-      <div className="first-fold p-6">
+      <div className="first-fold p-6 max-md:bg-cover max-md:bg-center ">
         <nav className="nav container-custom ">
          <div className=" max-md:hidden flex justify-end gap-5"> 
           <MenuBtn content={"About me"} />
           <MenuBtn content={"Projects"} />
           <MenuBtn content={"Contact"} />
+          </div>
+         <div className=" md:hidden flex justify-end gap-5 relative"> 
+          <button type="button" className="text-[#1F1F41] text-4xl" onClick={handleNav}>{openNav ? <FaXmark /> : <FaBars />}</button>
+         {openNav && <ul className="menu-items absolute w-full top-10">
+            <li><a href="#">About me</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>}
           </div>
         </nav>
 
