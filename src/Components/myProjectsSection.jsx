@@ -5,7 +5,7 @@ export function MyProjectsSection() {
     
 
     return (
-        <section className="my-projects z-[150]  my-20 max-md:mt-[140px]">
+        <section id='projects' className="my-projects z-[150]  my-20 max-md:mt-[140px]">
           <div className="heading text-6xl text-center z-[150]">
             <h2>My Projects</h2>
           </div>

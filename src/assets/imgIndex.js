@@ -18,6 +18,8 @@ import newsProject from './news-search-engine.png'
 import portfolioWebsite from './portfolio-website.png'
 import cody from './cody.png'
 import rock from './rock.png'
+import cssEnthu from './css-enthusiast.png'
+import resume from './ISRAR KHAN_Resume.pdf'
 
 
 export {
@@ -40,5 +42,7 @@ export {
     newsProject,
     portfolioWebsite,
     cody,
-    rock
+    rock,
+    cssEnthu,
+    resume
 }

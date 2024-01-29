@@ -11,7 +11,7 @@ import { TbBrandGithubFilled } from "react-icons/tb";
 import { FaXTwitter, FaXmark } from "react-icons/fa6";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { aboutImage, metalImage, nfakImg, valo } from "./assets/imgIndex";
+import { aboutImage, metalImage, nfakImg, valo, cssEnthu, resume } from "./assets/imgIndex";
 import { SkillSection } from "./Components/SkillSection";
 import { MyProjectsSection } from "./Components/myProjectsSection";
 import { Canvas } from "./Canvas/Canvas"; //creating a small chrome's dino like game: under development
@@ -28,7 +28,7 @@ function App() {
   const offHover = (e) => {
     setOverlay(false);
   };
-  
+
   const handleNav = () => {
     setOpenNav((prev) => !prev);
   };
@@ -49,9 +49,9 @@ function App() {
       <div className="first-fold p-6 max-md:bg-cover max-md:bg-left ">
         <nav className="nav container-custom ">
           <div className=" max-md:hidden flex justify-end gap-5">
-            <MenuBtn content={"About me"} />
-            <MenuBtn content={"Projects"} />
-            <MenuBtn content={"Contact"} />
+            <MenuBtn content={"About me"} link="#about-me"/>
+            <MenuBtn content={"Projects"} link="#projects"/>
+            <MenuBtn content={"Contact"} link="#connnect"/>
           </div>
           <div className=" md:hidden flex justify-end gap-5 relative">
             <button
@@ -70,13 +70,13 @@ function App() {
                   transition={{ duration: 1, type: "spring" }}
               className="menu-items absolute top-10 right-0">
                 <li>
-                  <a href="#">About me</a>
+                  <a href="#about-me">About me</a>
                 </li>
                 <li>
-                  <a href="#">Projects</a>
+                  <a href="#projects">Projects</a>
                 </li>
                 <li>
-                  <a href="#">Contact</a>
+                  <a href="#connnect">Contact</a>
                 </li>
               </motion.ul>
             )}
@@ -119,8 +119,8 @@ function App() {
               Download <br />
               my resume
             </span>
-            <span className="rounded-full w-16 h-16 bg-[#DBFF00] text-black grid content-center justify-center text-[32px] ">
-              <LiaDownloadSolid />
+            <span className="rounded-full w-16 h-16 bg-[#DBFF00] text-black grid content-center transition-all duration-200 justify-center text-[32px] hover:bg-[#BEC200]">
+            <a href={resume} download="Israr Khan Resume.pdf"><LiaDownloadSolid /></a>
             </span>
           </div>
 
@@ -137,7 +137,7 @@ function App() {
       </div>
 
       {/* about section */}
-      <section className="about-us container-custom flex my-20  max-md:flex-col ">
+      <section id="about-me" className="about-us container-custom flex my-20  max-md:flex-col ">
         <div className="about-left w-6/12 max-md:w-full max-md:mx-auto">
           <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] max-md:w-full max-md:mb-8">
             <div className="bar-main mb-5 rounded-[12px] h-12 bg-gradient-to-r from-[#4cf4fe] to-[#3b9aa0]">
@@ -186,7 +186,7 @@ function App() {
             >
               <div className="image w-32">
                 <img
-                  src={nfakImg}
+                  src={cssEnthu}
                   alt="nusrat fateh ali khan singing qawwali"
                 />
               </div>
@@ -254,7 +254,7 @@ function App() {
       {/* Game stection ends */}
 
       {/* Footer section */}
-      <footer>
+      <footer id="connnect">
         <section className="footer relative mb-28 container-custom bg-['1f1f41'] border-[#DBFF00] border-4 px-10 py-20 flex flex-nowrap max-md:flex-col max-md:m-5">
           <div className="footer-left w-6/12 max-md:w-full">
             <h3 className="heading text-[140px] leading-[0.9em] max-md:text-[60px] max-md:text-center">Reach Out</h3>
