@@ -7,7 +7,7 @@ export function SkillSection() {
     
 
     return (
-        <section  className="skill-section h-[700px] z-0">
+        <section  className="skill-section h-[700px] z-0 max-md:h-auto ">
         <div className="skill-section-inner container-custom relative h-full grid content-center ">
           <img src={skillBg}  alt="" className="background-image absolute animate-spin" />
   
@@ -35,7 +35,7 @@ export function SkillSection() {
   
   
   
-            <div className="skills flex flex-nowrap gap-8 justify-center z-10">
+            <div className="skills flex flex-nowrap gap-8 justify-center z-10 max-md:flex-col max-md:items-center">
              
               <div className="skill grid content-center justify-center">
                 <img src={html} alt="" />

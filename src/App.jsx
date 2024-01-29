@@ -8,19 +8,19 @@ import { FaMusic, FaLinkedinIn, FaBars } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { SlOptions } from "react-icons/sl";
 import { TbBrandGithubFilled } from "react-icons/tb";
-import { FaXTwitter, FaXmark  } from "react-icons/fa6";
+import { FaXTwitter, FaXmark } from "react-icons/fa6";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { aboutImage, metalImage, nfakImg, valo } from "./assets/imgIndex";
 import { SkillSection } from "./Components/SkillSection";
 import { MyProjectsSection } from "./Components/myProjectsSection";
-import { Canvas } from "./Canvas/Canvas";
+import { Canvas } from "./Canvas/Canvas"; //creating a small chrome's dino like game: under development
 
 function App() {
-  const gradientColor =
-    " from-[#DBFF00] via-[#4DF4FF] via--[#DBFF00] to-[#4DF4FF]";
-
   const [overlay, setOverlay] = useState(false);
+  const [openNav, setOpenNav] = useState(false);
+ 
+
 
   const onHover = (e) => {
     setOverlay(true);
@@ -28,13 +28,11 @@ function App() {
   const offHover = (e) => {
     setOverlay(false);
   };
-
-  const [openNav, setOpenNav] = useState(false)
-
+  
   const handleNav = () => {
-      setOpenNav((prev) => !prev)
-  }
- 
+    setOpenNav((prev) => !prev);
+  };
+
   return (
     <main className=" overflow-x-hidden max-w-full h-[100vh]">
       <AnimatePresence>
@@ -48,41 +46,62 @@ function App() {
         )}
       </AnimatePresence>
 
-      <div className="first-fold p-6 max-md:bg-cover max-md:bg-center ">
+      <div className="first-fold p-6 max-md:bg-cover max-md:bg-left ">
         <nav className="nav container-custom ">
-         <div className=" max-md:hidden flex justify-end gap-5"> 
-          <MenuBtn content={"About me"} />
-          <MenuBtn content={"Projects"} />
-          <MenuBtn content={"Contact"} />
+          <div className=" max-md:hidden flex justify-end gap-5">
+            <MenuBtn content={"About me"} />
+            <MenuBtn content={"Projects"} />
+            <MenuBtn content={"Contact"} />
           </div>
-         <div className=" md:hidden flex justify-end gap-5 relative"> 
-          <button type="button" className="text-[#1F1F41] text-4xl" onClick={handleNav}>{openNav ? <FaXmark /> : <FaBars />}</button>
-         {openNav && <ul className="menu-items absolute w-full top-10">
-            <li><a href="#">About me</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>}
+          <div className=" md:hidden flex justify-end gap-5 relative">
+            <button
+              type="button"
+              className="text-white text-4xl"
+              onClick={handleNav}
+            >
+              {openNav ? <FaXmark /> : <FaBars />}
+            </button>
+            <AnimatePresence>
+            {openNav && (
+              <motion.ul
+                  initial={{ translateY: -300, transformOrigin: "top right", rotate: 90  }}
+                  animate={{ translateY: 0,  rotate: 0}}
+                  exit={{ translateY: -300, transformOrigin: "top left", rotate: -90 }}
+                  transition={{ duration: 1, type: "spring" }}
+              className="menu-items absolute top-10 right-0">
+                <li>
+                  <a href="#">About me</a>
+                </li>
+                <li>
+                  <a href="#">Projects</a>
+                </li>
+                <li>
+                  <a href="#">Contact</a>
+                </li>
+              </motion.ul>
+            )}
+            </AnimatePresence>
           </div>
         </nav>
 
         {/* Hero Header starts */}
-        <section className="hero-section container-custom h-[90vh] grid content-center">
-          <div className="hero-info w-fit m-auto mb-[-230px]">
-            <h1 className=" text-[230px] leading-[0.9em] text-[#DBFF00]">
+        <section className="hero-section container-custom h-[90vh] grid content-center max-md:h-[30vh] max-md:mb-[250px]">
+          <div className="hero-info w-fit m-auto mb-[-230px] max-md:mb-[-150px]">
+            <h1 className=" text-[230px] leading-[0.9em] text-[#DBFF00] max-md:text-[150px]">
               Hello
             </h1>
-            <h3 className="heading text-[84px] leading-[1em] text-right ">
+            <h3 className="heading text-[84px] leading-[1em] text-right max-md:text-[60px]">
               Iam Israr
             </h3>
           </div>
         </section>
 
-        <section className="front-end container-custom heading text-4xl mb-8 mt-40">
+        <section className="front-end container-custom heading text-4xl mb-8 mt-40 max-md:mt-60 max-md:text-center">
           Front-end Developer
         </section>
         {/* Hero Header ends */}
 
-        <section className="info container-custom flex flex-nowrap items-center mb-40">
+        <section className="info container-custom flex flex-nowrap items-center mb-40 max-md:flex-col max-md:w-full max-md:mb-10">
           <div className="info-inner">
             <div className="info-inner-box">
               Based in <br />
@@ -118,9 +137,9 @@ function App() {
       </div>
 
       {/* about section */}
-      <section className="about-us container-custom flex my-20 ">
-        <div className="about-left w-6/12 ">
-          <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] ">
+      <section className="about-us container-custom flex my-20  max-md:flex-col ">
+        <div className="about-left w-6/12 max-md:w-full max-md:mx-auto">
+          <div className="about-wrap p-5 rounded-3xl w-10/12 bg-[#262626] max-md:w-full max-md:mb-8">
             <div className="bar-main mb-5 rounded-[12px] h-12 bg-gradient-to-r from-[#4cf4fe] to-[#3b9aa0]">
               <div className="inner-bar rounded-[12px] flex flex-nowrap px-3 py-2  h-12 bg-gradient-to-r from-[#DBFF00] to-[#A0FB6A]">
                 <div className="bar-pusher h-full w-0"></div>
@@ -138,7 +157,7 @@ function App() {
           </div>
         </div>
 
-        <div className="about-right w-6/12 flex flex-col">
+        <div className="about-right w-6/12 flex flex-col max-md:w-full max-md:mb-8">
           <h2 className="heading text-6xl">About us</h2>
           <p className="mt-4">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
@@ -159,11 +178,11 @@ function App() {
             suscipit.
           </p>
 
-          <div className="cards-container flex-grow-[1] relative z-[150]">
+          <div className="cards-container flex-grow-[1] relative z-[150] max-md:mt-8 max-md:h-[300px]">
             <div
               onMouseOver={onHover}
               onMouseLeave={offHover}
-              className="card bg-[#DBFF00] text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-0 left-0  hover:translate-y-[-20px] hover:z-[101] transition-all duration-500"
+              className="card bg-[#DBFF00] text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-0 left-0  hover:translate-y-[-20px] hover:z-[101] transition-all duration-500 max-md:w-[340px]"
             >
               <div className="image w-32">
                 <img
@@ -182,7 +201,7 @@ function App() {
             <div
               onMouseOver={onHover}
               onMouseLeave={offHover}
-              className="card bg-[#4CF4FF] text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-[90px] left-[55px] rotate-6 hover:rotate-0  hover:translate-y-[-50px] hover:z-[101] transition-all duration-500"
+              className="card bg-[#4CF4FF] text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-[90px] left-[55px] rotate-6 hover:rotate-0  hover:translate-y-[-50px] hover:z-[101] transition-all duration-500 max-md:w-[340px] max-md:left-[20px]"
             >
               <div className="image w-32">
                 <img
@@ -200,7 +219,7 @@ function App() {
             <div
               onMouseOver={onHover}
               onMouseLeave={offHover}
-              className="card bg-white text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-[150px] left-[70px] -rotate-6 hover:rotate-0  hover:translate-y-[-50px] hover:z-[101] transition-all duration-500"
+              className="card bg-white text-black flex  flex-nowrap items-center w-96 rounded-2xl absolute top-[150px] left-[70px] -rotate-6 hover:rotate-0  hover:translate-y-[-50px] hover:z-[101] transition-all duration-500 max-md:w-[360px] max-md:left-[0px]"
             >
               <div className="image w-32">
                 <img src={valo} alt="nusrat fateh ali khan singing qawwali" />
@@ -236,10 +255,10 @@ function App() {
 
       {/* Footer section */}
       <footer>
-        <section className="footer relative mb-28 container-custom bg-['1f1f41'] border-[#DBFF00] border-4 px-10 py-20 flex flex-nowrap">
-          <div className="footer-left w-6/12 ">
-            <h3 className="heading text-[140px] leading-[0.9em]">Reach Out</h3>
-            <div className="flex gap-4 mt-10">
+        <section className="footer relative mb-28 container-custom bg-['1f1f41'] border-[#DBFF00] border-4 px-10 py-20 flex flex-nowrap max-md:flex-col max-md:m-5">
+          <div className="footer-left w-6/12 max-md:w-full">
+            <h3 className="heading text-[140px] leading-[0.9em] max-md:text-[60px] max-md:text-center">Reach Out</h3>
+            <div className="flex gap-4 mt-10 max-md:flex-wrap max-md:justify-evenly">
               <div className="connect">
                 <span className="mr-[35px]">
                   <FaLinkedinIn />
@@ -266,15 +285,14 @@ function App() {
               </div>
             </div>
 
-            <div className="bar-main rounded-[12px] h-12 bg-[#4DF4FF] absolute w-[500px] -bottom-7">
+            <div className="bar-main rounded-[12px] h-12 bg-[#4DF4FF] absolute w-[500px] -bottom-7 max-md:-top-7 max-md:w-[80%]">
               <div className="inner-bar rounded-[12px] flex flex-nowrap px-3 py-2  h-12 bg-gradient-to-r from-[#DBFF00] to-[#A0FB6A]">
                 <div className="bar-pusher h-full w-0"></div>
                 <div className="bar-scroller w-[60px] bg-white h-full rounded-md border-5 border-[#BBD905]"></div>
               </div>
             </div>
-
           </div>
-          <div className="footer-right w-6/12 flex flex-wrap justify-center items-center text-center">
+          <div className="footer-right w-6/12 flex flex-wrap justify-center items-center text-center max-md:flex-col max-md:mt-10 max-md:gap-8 max-md:w-full">
             <div className="w-6/12">
               <a href="#">
                 <button className="border-[2px] py-5 w-[220px] rotate-[14deg] rounded-[50px] text-[28px] hover:bg-white hover:text-black transition-all duration-[250ms]">
@@ -291,7 +309,7 @@ function App() {
             </div>
             <div className="w-full">
               <a href="#">
-                <button className="border-[2px] py-5 w-[220px] -rotate-6 rounded-[50px] text-[28px] hover:bg-white hover:text-black transition-all duration-[250ms]">
+                <button className="border-[2px] py-5 w-[220px] -rotate-6 rounded-[50px] text-[28px] hover:bg-white hover:text-black transition-all duration-[250ms] max-md:rotate-[14deg]">
                   My Projects
                 </button>
               </a>

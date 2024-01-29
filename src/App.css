@@ -229,6 +229,66 @@ p {
   border-radius: 35px 35px 200px 35px;
 }
 
-.menu-items > li{
-  padding-bottom: 10px;
+.menu-items {
+  width: 250px;
+  background: #1F1F41;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+
+.menu-items > li:not(li:last-child){
+  margin-bottom: 10px;
+}
+.menu-items > li {
+  padding: 5px;
+  padding-left: 10px;
+  border-radius: 5px;
+  transition: all 250ms linear;
+}
+
+.menu-items > li:hover {
+  background-color: #ffffff65;
+}
+
+
+/* responsive css */
+
+@media not all and (min-width: 768px) {
+  .info .info-inner:not(.info .info-inner:nth-of-type(4)) {
+    width: 100%;
+    margin-bottom: -10px;
+  }
+
+  .info .info-inner:nth-of-type(4){
+    margin-top: 40px;
+  }
+
+  .container-custom {
+    padding: 0px 20px;
+  }
+
+
+  .skills .skill {
+    width: 140px;
+  }
+
+  .background-image {
+    width: 500px!important;
+    top: 536px;
+    left: 10px;
+  }
+
+  .project {
+    background-size: cover!important;
+  }
+  
+  .project-bottom img {
+    border-radius: 25px 25px 100px 25px;
+  }
+
+  .connect:hover{
+    width: 140px;
+  }
+
 }
