@@ -14,10 +14,10 @@ export function MyProjectsSection() {
               <div className="project-upper flex">
                 <div className="content w-8/12">
                   <h3 className="heading text-4xl">Personal Blog</h3>
-                  <p className="max-md:mr-[-50%] my-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p className="max-md:mr-[-50%] my-8">React-based project, with features such as user authentication, post creation, editing, and viewing etc</p>
                 </div>
                 <div className="btn-container w-4/12 ">
-                  <a href="" className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
+                  <a href="https://github.com/isrark005/blog-project" target='_blank' className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
                     <button className="project-go-btn  overflow-hidden text text-3xl">Go</button>
                     </a>
                 </div>
@@ -30,10 +30,10 @@ export function MyProjectsSection() {
               <div className="project-upper flex">
                 <div className="content w-8/12">
                   <h3 className="heading text-4xl">Currency converter</h3>
-                  <p className="max-md:mr-[-50%] my-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p className="max-md:mr-[-50%] my-8">React based application, offering real-time currency conversion, country search option ,  and an intuitive user interface</p>
                 </div>
                 <div className="btn-container w-4/12 ">
-                  <a href="" className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
+                  <a href="https://github.com/isrark005/currencyConverter" target='_blank' className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
                     <button className="project-go-btn  overflow-hidden text text-3xl">Go</button>
                     </a>
                 </div>
@@ -46,10 +46,11 @@ export function MyProjectsSection() {
               <div className="project-upper flex">
                 <div className="content w-8/12">
                   <h3 className="heading text-4xl">News search engine</h3>
-                  <p className="max-md:mr-[-50%] my-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p className="max-md:mr-[-50%] my-8">React-based web application designed 
+to fetch and display news articles based on user input.</p>
                 </div>
                 <div className="btn-container w-4/12 ">
-                  <a href="" className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
+                  <a href="https://github.com/isrark005/news-on-internet" target='_blank' className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
                     <button className="project-go-btn  overflow-hidden text text-3xl">Go</button>
                     </a>
                 </div>
@@ -62,10 +63,10 @@ export function MyProjectsSection() {
               <div className="project-upper flex">
                 <div className="content w-8/12">
                   <h3 className="heading text-4xl">Personal Portfolio</h3>
-                  <p className="max-md:mr-[-50%] my-8">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod </p>
+                  <p className="max-md:mr-[-50%] my-8">React-based Personal portfolio which contains custom animations and animations using Framer motion</p>
                 </div>
                 <div className="btn-container w-4/12 ">
-                  <a href="" className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
+                  <a href="https://github.com/isrark005/portfolio" target='_blank' className="project-link relative float-right w-[90px] h-[90px] bg-[#DBFF00] grid content-center text-black heading rounded-full">
                     <button className="project-go-btn  overflow-hidden text text-3xl">Go</button>
                     </a>
                 </div>
