@@ -27,8 +27,12 @@ import {
 } from "./icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas } from "./Canvas/Canvas"; //creating a small chrome's dino like game: under development
+import LocomotiveScroll from 'locomotive-scroll';
 
 function App() {
+
+const locomotiveScroll = new LocomotiveScroll();
+
   const [overlay, setOverlay] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const [openSongs, setOpenSongs] = useState(false);
@@ -49,7 +53,7 @@ function App() {
   };
 
   return (
-    <main className=" overflow-x-hidden max-w-full h-[100vh]">
+    <main className="   max-w-full h-[100vh]">
       <AnimatePresence>
         {overlay && (
           <motion.div
