@@ -285,7 +285,7 @@ const locomotiveScroll = new LocomotiveScroll();
       {/* Game stection ends */}
 
       {/* Footer section */}
-      <footer id="connnect">
+      <footer id="connnect" className="mb-8">
         <section className="footer relative mb-28 container-custom bg-['1f1f41'] border-[#DBFF00] border-4 px-10 py-20 flex flex-nowrap max-md:flex-col max-md:m-5">
           <div className="footer-left w-6/12 max-md:w-full">
             <h3 className="heading text-[140px] leading-[0.9em] max-md:text-[60px] max-md:text-center">
