@@ -28,11 +28,7 @@ import {
 import { motion, AnimatePresence } from "framer-motion";
 import { Canvas } from "./Canvas/Canvas"; //creating a small chrome's dino like game: under development
 
-
 function App() {
-
-
-
   const [overlay, setOverlay] = useState(false);
   const [openNav, setOpenNav] = useState(false);
   const [openSongs, setOpenSongs] = useState(false);
