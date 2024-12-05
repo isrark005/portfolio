@@ -19,7 +19,7 @@ export function MyProjectsSection() {
       <div className="project w-[643px] bg-black border-white rounded-2xl border-4 p-10">
           <div className="project-upper flex">
             <div className="content w-8/12">
-              <h3 className="heading text-4xl">Github Compare</h3>
+              <h3 className="heading text-4xl">Github <br className="sm:hidden" /> Compare</h3>
               <p className="max-md:mr-[-50%] my-8">
               Web app showcasing user stats through interactive graphs and personalized memes, enabling fun and insightful comparisons.
               </p>
@@ -47,7 +47,7 @@ export function MyProjectsSection() {
         <div className="project w-[643px] bg-black border-white rounded-2xl border-4 p-10">
           <div className="project-upper flex">
             <div className="content w-8/12">
-              <h3 className="heading text-4xl">100xSumarize</h3>
+              <h3 className="heading text-4xl">100x<br className="sm:hidden" />Sumarize</h3>
               <p className="max-md:mr-[-50%] my-8">
               Summarizes Notion pages using AI, enabling tutors to review multiple documents efficiently on a single dashboard.
               </p>
