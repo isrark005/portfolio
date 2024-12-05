@@ -20,6 +20,7 @@ import cody from "./cody.png";
 import rock from "./rock.png";
 import cssEnthu from "./css-enthusiast.png";
 import resume from "./ISRAR KHAN_Resume.pdf";
+import githubCompare from "./github-compare.jpg"
 
 export {
   aboutImage,
@@ -44,4 +45,5 @@ export {
   rock,
   cssEnthu,
   resume,
+  githubCompare
 };

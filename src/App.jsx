@@ -134,7 +134,7 @@ function App() {
           </div>
           <div className="info-inner">
             <div className="info-inner-box">
-              2+ years of
+              3+ years of
               <br /> work exp.
             </div>
           </div>
